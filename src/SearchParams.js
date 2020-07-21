@@ -1,10 +1,7 @@
-/* eslint-disable no-console */
-/* eslint-disable no-undef */
 import React, { useState, useEffect } from "react";
 import pet, { ANIMALS } from "@frontendmasters/pet";
 import useDropdown from "./useDropdown";
 import Results from "./Results";
-
 
 const SearchParams = () => {
   const [location, updateLocation] = useState("Seattle, WA");
@@ -29,6 +26,7 @@ const SearchParams = () => {
     pet.breeds(animal).then(({ breeds }) => {
       const breedStrings = breeds.map(({ name }) => name);
       updateBreeds(breedStrings);
+    // eslint-disable-next-line no-console
     }, console.error);
   }, [animal, updateBreed]);
 

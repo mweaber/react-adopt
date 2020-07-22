@@ -8,6 +8,8 @@ export class Carousel extends Component {
       photos: [],
       active: 0,
     };
+
+    this.handleIndexClick = this.handleIndexClick.bind(this);
   }
 
   static getDerivedStateFromProps({ media }) {
@@ -19,6 +21,14 @@ export class Carousel extends Component {
 
     return { photos };
   }
+
+  handleIndexClick(e) {
+    this.setState({
+      active: +e.target.dataset.index,
+    });
+  };
+
+
 
   render() {
     const { photos, active } = this.state;

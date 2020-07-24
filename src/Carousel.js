@@ -12,6 +12,15 @@ export class Carousel extends Component {
     this.handleIndexClick = this.handleIndexClick.bind(this);
   }
 
+  // state= {loading : true};
+
+  
+  // state = {
+  //   photos: [],
+  //   active: 0
+  // }; 
+  
+
   static getDerivedStateFromProps({ media }) {
     let photos = ["http://placecorgi.com/600/600"];
 
